@@ -1,6 +1,10 @@
 import { createServer } from "http"
 import { Server } from "socket.io"
 
+io.on("connection", (socket) => {
+  console.log("🔥 CLIENT CONNECTED:", socket.id)
+})
+
 const PORT = process.env.PORT || 10000
 
 const httpServer = createServer()
